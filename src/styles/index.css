@@ -1,0 +1,152 @@
+/* index.scss */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+menu, ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+body {
+  width: 100vw;
+  height: 100vh; }
+
+* {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 40%;
+  height: 80%;
+  min-width: 360px;
+  max-width: 568px;
+  max-height: 1000px; }
+  #app #top_block {
+    flex: 1; }
+  #app #middle_block {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    flex: 15; }
+  #app #bottom_block {
+    flex: 1; }
+  #app .block {
+    padding: 10px; }
+
+@media (max-width: 767px), (max-height: 429px) {
+  #app {
+    border: none;
+    max-width: none;
+    max-height: none;
+    width: 100vw;
+    height: 100vh; } }
+
+.input {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: 5px;
+  padding: 0px 20px;
+  height: 100%;
+  max-height: 35px;
+  min-height: 25px;
+  width: 100%; }
+  .input:focus-visible {
+    border: 1px solid black;
+    outline: none; }
+
+.button {
+  background: none;
+  border: 1px solid black;
+  padding: 0px 20px;
+  height: 100%;
+  max-height: 35px;
+  min-height: 25px;
+  border-radius: 5px;
+  transition: 0.2s; }
+  .button:hover {
+    background: rgba(0, 0, 0, 0.1); }
+  .button:active {
+    background: rgba(0, 0, 0, 0.16); }
+
+.message_input {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+  .message_input #btnMessage {
+    border: none;
+    font-size: 40px;
+    transition: 0.3s;
+    color: rgba(0, 0, 0, 0.738);
+    background: none; }
+    .message_input #btnMessage:hover {
+      color: black; }
+
+.top_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.settings {
+  background-color: white; }
+
+dialog {
+  border: none;
+  width: 60vw;
+  height: 50vh; }
+
+dialog::backdrop {
+  background-color: rgba(56, 56, 56, 0.4); }

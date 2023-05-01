@@ -1,0 +1,64 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+
+    #top_block {
+        flex: 1;
+    }
+
+    #middle_block {
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        flex: 15;
+    }
+
+    #bottom_block {
+        flex: 1;
+    }
+
+    .block {
+        padding: 10px;
+    }
+
+    border-radius: 10px;
+    border: 1px solid black;
+
+    width: 40%;
+    height: 80%;
+
+    min-width: 360px;
+
+    max-width: 568px;
+    max-height: 1000px;
+}
+
+@media (max-width: 767px), (max-height: 429px) {
+    #app {
+        border: none;
+
+        max-width: none;
+        max-height: none;
+
+        width: 100vw;
+        height: 100vh;
+    }
+}

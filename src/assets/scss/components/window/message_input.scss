@@ -1,0 +1,17 @@
+.message_input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    #btnMessage {
+        border: none;
+        font-size: 40px;
+        transition: 0.3s;
+        color: rgba(0, 0, 0, 0.738);
+        background: none;
+
+        &:hover {
+            color: black;
+        }
+    }
+}

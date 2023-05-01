@@ -1,0 +1,23 @@
+/* index.scss */
+
+// Импорт reset-css для сброса стилей по умолчанию
+@import '../../../node_modules/reset-css/sass/reset';
+
+// Импорт стилей компоновки
+@import './layout/layout.scss';
+
+// Испорт стилей для компонентов
+@import './components/component/input.scss';
+@import './components/component/button.scss';
+@import './components/component/message.scss';
+
+// Импорт стилей для главного окна
+@import './components/window/messages_wrapper.scss';
+@import './components/window/message_input.scss';
+@import './components/window/top_bar.scss';
+
+// Импорт стилей для диалоговых окон
+@import './components/dialog/authorization.scss';
+@import './components/dialog/confirmation.scss';
+@import './components/dialog/settings.scss';
+@import './components/dialog/dialog.scss';
