@@ -139,14 +139,3 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.settings {
-  background-color: white; }
-
-dialog {
-  border: none;
-  width: 60vw;
-  height: 50vh; }
-
-dialog::backdrop {
-  background-color: rgba(56, 56, 56, 0.4); }
