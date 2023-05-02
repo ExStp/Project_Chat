@@ -7,7 +7,8 @@
 
 // Более подробное описание по приколу я решил написать в README.MD
 
-class Storage {
+export default class Storage {
+    
     constructor(storage = localStorage) {
         if (storage !== localStorage && storage !== sessionStorage) {
             throw new Error("Invalid storage object passed!");
@@ -69,5 +70,3 @@ class Storage {
         return this.storage.length;
     }
 }
-
-export default Storage;

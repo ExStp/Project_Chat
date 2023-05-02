@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script type="module" src="./scripts/index.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+            />
+        <script type="module" src="./scripts/index.js"></script>
+    </head>
+    <body>
 
-    <div id="app">
+        <div id="app">
 
-        <div class="top_bar block" id="top_block">
-            <input class="btn_settings button" value="Настройки" type="button">
-            <input class="btn_exit button" value="Выйти" type="button">
+            <div class="top_bar block" id="top_block">
+                <input class="btn_settings button" value="Настройки"
+                    type="button" id="btnOpenSettings">
+                <input class="btn_exit button" value="Выйти" type="button"
+                    id="btnQuit">
+            </div>
+
+            <div class="messages_wrapper block" id="middle_block">
+
+            </div>
+
+            <div class="message_input block" id="bottom_block">
+                <input placeholder="Сообщение.." type="text" class="input">
+                <input value="send" type="button"
+                    class="material-symbols-outlined" id="btnMessage">
+            </div>
+
+            <dialog id="modal">
+
+                <div class="modal__top_bar">
+                    <span class="top_bar__action">Диалог</span>
+                    <input type="button" value="close"
+                        class="material-symbols-outlined" id="btnModalClose">
+                </div>
+
+                <div class="modal__form_container">
+                    <!-- Форма добавляется с помощью javascript -->
+                </div>
+
+            </dialog>
         </div>
 
-        <div class="messages_wrapper block" id="middle_block">
-
-        </div>
-
-        <div class="message_input block" id="bottom_block">
-            <input placeholder="Сообщение.." type="text" class="input">
-            <input value="send" type="button" class="material-symbols-outlined" id="btnMessage"> 
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>

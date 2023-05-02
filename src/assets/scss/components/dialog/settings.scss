@@ -1,0 +1,16 @@
+.settings_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    #nicknameInput {
+        background: none;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    #submitNickname {
+        min-width: 100px;
+        width: 30%;
+    }
+}

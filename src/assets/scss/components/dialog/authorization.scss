@@ -1,0 +1,12 @@
+.authorization_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    .authorization_btns_wrapper {
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+    }
+}
