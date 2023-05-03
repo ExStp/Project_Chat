@@ -1,0 +1,3 @@
+function renderConfirmation() {}
+
+export { renderConfirmation };

@@ -1,11 +1,9 @@
-import { modal, modalAuthorization_innerHTML } from "../const.js";
+import { DIALOG } from "../const.js";
+import { renderAuthorization } from "./render/renderAuthorization.js";
 
 function authorization(event) {
     event.preventDefault();
-    modal.showModal();
-
-    const container = document.querySelector(".modal__form_container");
-    container.innerHTML = modalAuthorization_innerHTML;
+    renderAuthorization();
 }
 
 export { authorization };

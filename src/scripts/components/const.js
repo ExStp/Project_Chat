@@ -1,4 +1,4 @@
-const modalSettings_innerHTML = `
+export const modalSettings_innerHTML = `
     <form class="settings_form">
         <label for="nickname">Имя в чате:</label>
         <input type="text" name="nickname" placeholder="Имя" class="dialog_input" id="nicknameInput">
@@ -6,7 +6,7 @@ const modalSettings_innerHTML = `
     </form>
 `;
 
-const modalAuthorization_innerHTML = `
+export const modalAuthorization_innerHTML = `
     <form class="authorization_form">
         <label for="code">Почта:</label>
         <input type="text" name="code" placeholder="Введите почту"
@@ -20,10 +20,14 @@ const modalAuthorization_innerHTML = `
     </form>
 `;
 
-const btnOpenSettings = document.querySelector("#btnOpenSettings");
-const btnModalClose = document.querySelector("#btnModalClose");
-const btnQuit = document.querySelector("#btnQuit");
-const modal = document.querySelector("#modal");
+export const BUTTONS = {
+    btnQuit: document.querySelector("#btnQuit"),
+    btnModalClose: document.querySelector("#btnModalClose"),
+    btnOpenSettings: document.querySelector("#btnOpenSettings"),
+};
 
-export { modalSettings_innerHTML, modalAuthorization_innerHTML };
-export { modal, btnOpenSettings, btnModalClose, btnQuit };
+export const DIALOG = {
+    modal: document.querySelector("#modal"),
+    purpose: document.querySelector(".top_bar__action"),
+    modalForm: document.querySelector(".modal__form_container"),
+};

@@ -1,11 +1,9 @@
-import { modal, modalSettings_innerHTML } from "../const.js";
+import { DIALOG } from "../const.js";
+import { renderSettings } from "./render/renderSettings.js";
 
 function settings(event) {
     event.preventDefault();
-    modal.showModal();
-
-    const container = document.querySelector(".modal__form_container");
-    container.innerHTML = modalSettings_innerHTML;
+    renderSettings();
 }
 
 export { settings };
