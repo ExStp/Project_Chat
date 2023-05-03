@@ -5,13 +5,7 @@ function renderSettings() {
     DIALOG.modalForm.append(getSettingsForm());
     DIALOG.purpose.textContent = "Настройки";
     DIALOG.modal.showModal();
-
-    BUTTONS.modalClose.addEventListener("click", handleClick);
-
-    function handleClick() {
-        closeModal();
-        BUTTONS.modalClose.removeEventListener("click", handleClick);
-    }
+    BUTTONS.modalClose.dataset.modal = "settings";
 }
 
 function getSettingsForm() {

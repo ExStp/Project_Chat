@@ -1,8 +1,10 @@
-import { DIALOG } from "../../const.js";
+import { DIALOG, BUTTONS } from "../../const.js";
+import { closeModal } from "./closeModal.js";
 
 function renderAuthorization() {
     DIALOG.modalForm.append(getAuthorizationForm());
     DIALOG.purpose.textContent = "Авторизация";
+    BUTTONS.modalClose.dataset.modal = "authorization";
     DIALOG.modal.showModal();
 }
 

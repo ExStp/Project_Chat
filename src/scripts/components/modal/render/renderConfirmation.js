@@ -1,8 +1,9 @@
-import { DIALOG } from "../../const";
+import { DIALOG, BUTTONS } from "../../const";
 
 function renderConfirmation() {
     DIALOG.modalForm.append(getConfirmationForm());
     DIALOG.purpose.textContent = "Подтверждение";
+    BUTTONS.modalClose.dataset.modal = "confirmation";
     DIALOG.modal.showModal();
 }
 

@@ -35,7 +35,7 @@ export const BUTTONS = {
     quit: document.querySelector("#btnQuit"),
     modalClose: document.querySelector("#btnModalClose"),
     openSettings: document.querySelector("#btnOpenSettings"),
-    sendCode: document.querySelector('#sendCode'),
+    sendCode: document.querySelector("#sendCode"),
 };
 
 export const DIALOG = {
