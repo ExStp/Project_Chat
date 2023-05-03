@@ -20,10 +20,22 @@ export const modalAuthorization_innerHTML = `
     </form>
 `;
 
+export const modalConfirmation_innerHTML = `
+    <form class="confirmation_form">
+        <label for="code">Код:</label>
+        <input type="text" name="code" placeholder="Введите код"
+            class="dialog_input" id="codeInput">
+        <input type="button" value="Войти"
+            class="dialog_btn"
+            id="confirmCode">
+    </form>
+`;
+
 export const BUTTONS = {
-    btnQuit: document.querySelector("#btnQuit"),
-    btnModalClose: document.querySelector("#btnModalClose"),
-    btnOpenSettings: document.querySelector("#btnOpenSettings"),
+    quit: document.querySelector("#btnQuit"),
+    modalClose: document.querySelector("#btnModalClose"),
+    openSettings: document.querySelector("#btnOpenSettings"),
+    sendCode: document.querySelector('#sendCode'),
 };
 
 export const DIALOG = {

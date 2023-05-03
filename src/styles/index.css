@@ -150,6 +150,15 @@ body {
     justify-content: left;
     gap: 15px; }
 
+.confirmation_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px; }
+  .confirmation_form #confirmCode {
+    width: 30%;
+    min-width: 100px; }
+
 .settings_form {
   display: flex;
   flex-direction: column;

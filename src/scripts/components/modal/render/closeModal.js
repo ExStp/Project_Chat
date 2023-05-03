@@ -1,7 +1,6 @@
 import { DIALOG } from "../../const";
 
 export function closeModal() {
+    DIALOG.modalForm.querySelectorAll("*").forEach((item) => item.remove());
     DIALOG.modal.close();
-    const container = document.querySelector(".modal__form_container");
-    container.querySelectorAll("*").forEach((item) => item.remove());
 }

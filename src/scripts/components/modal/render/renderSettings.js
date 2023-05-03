@@ -6,11 +6,11 @@ function renderSettings() {
     DIALOG.purpose.textContent = "Настройки";
     DIALOG.modal.showModal();
 
-    BUTTONS.btnModalClose.addEventListener("click", handleClick);
+    BUTTONS.modalClose.addEventListener("click", handleClick);
 
     function handleClick() {
         closeModal();
-        BUTTONS.btnModalClose.removeEventListener("click", handleClick);
+        BUTTONS.modalClose.removeEventListener("click", handleClick);
     }
 }
 
