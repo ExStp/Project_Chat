@@ -23,11 +23,18 @@
             </div>
 
             <div class="messages_wrapper block" id="middle_block">
+                <template id="messageTemplate">
 
+                </template>
+                <div class="message_item message_left delivered">
+                    <div id="messageText" class="message_innerText">Таким  образомаким образом, есл</div>
+                    <div id="messageTime" class="message_innerTime">15:45</div>
+                </div>
             </div>
 
             <div class="message_input block" id="bottom_block">
-                <input placeholder="Сообщение.." type="text" class="input">
+                <input placeholder="Сообщение.." type="text" class="input"
+                    id="messageInput">
                 <input value="send" type="button"
                     class="material-symbols-outlined" id="btnMessage">
             </div>

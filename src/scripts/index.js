@@ -1,24 +1,12 @@
-import { BUTTONS, DIALOG } from "./components/const.js";
-import { settings } from "./components/modal/settings.js";
-// import { confirmation } from "./components/modal/confirmation.js";
-import { authorization } from "./components/modal/authorization.js";
-import { closeModal } from "./components/modal/render/closeModal.js";
+import { BUTTONS, INPUTS } from "./components/const.js";
+import { sendMessage } from "./components/logic/messaging/sendMessage.js";
+import { modalController } from "./components/modal/modalController.js";
 
-BUTTONS.openSettings.addEventListener("click", (event) => {
-    settings(event);
+document.addEventListener('DOMContentLoaded', modalController);
+
+BUTTONS.btnMessage.addEventListener("click", sendMessage);
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === "Enter") sendMessage();
+    else INPUTS.messageInput.focus();
 });
-
-BUTTONS.quit.addEventListener("click", (event) => {
-    authorization(event);
-});
-
-BUTTONS.modalClose.addEventListener("click", handlerModalClose);
-
-function handlerModalClose() {
-    const ALLOWED_PURPOSES = ["settings", "authorization", "confirmation"];
-
-    const dialogPurpose = BUTTONS.modalClose.dataset.modal;
-    if (ALLOWED_PURPOSES.includes(dialogPurpose)) {
-        closeModal();
-    }
-}

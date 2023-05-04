@@ -1,0 +1,31 @@
+$deliveredColor: #E5E5E5;
+$sendedColor: #F7F7F7;
+
+.message_item {
+    display: inline-block;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &.delivered {
+        background: $deliveredColor;
+    }
+
+    &.sended {
+        background: $sendedColor;
+    }
+
+    .message_innerText {
+        font-size: 22px;
+    }
+
+    .message_innerTime {
+        font-style: italic;
+        font-size: 18px;
+    }
+}

@@ -123,6 +123,35 @@ body {
     background: rgba(0, 0, 0, 0.681);
     color: white; }
 
+.message_item {
+  display: inline-block;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: flex-end; }
+  .message_item.delivered {
+    background: #E5E5E5; }
+  .message_item.sended {
+    background: #F7F7F7; }
+  .message_item .message_innerText {
+    font-size: 22px; }
+  .message_item .message_innerTime {
+    font-style: italic;
+    font-size: 18px; }
+
+.messages_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; }
+  .messages_wrapper .message_right {
+    align-self: flex-end; }
+  .messages_wrapper .message_left {
+    align-self: flex-start; }
+
 .message_input {
   display: flex;
   align-items: center;

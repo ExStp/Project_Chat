@@ -36,10 +36,15 @@ export const BUTTONS = {
     modalClose: document.querySelector("#btnModalClose"),
     openSettings: document.querySelector("#btnOpenSettings"),
     sendCode: document.querySelector("#sendCode"),
+    btnMessage: document.querySelector("#btnMessage"),
 };
 
 export const DIALOG = {
     modal: document.querySelector("#modal"),
     purpose: document.querySelector(".top_bar__action"),
     modalForm: document.querySelector(".modal__form_container"),
+};
+
+export const INPUTS = {
+    messageInput: document.querySelector("#messageInput"),
 };
