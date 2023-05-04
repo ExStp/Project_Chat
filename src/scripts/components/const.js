@@ -45,6 +45,16 @@ export const DIALOG = {
     modalForm: document.querySelector(".modal__form_container"),
 };
 
+export const WINDOWS = {
+    top: document.querySelector("#top_block"),
+    middle: document.querySelector("#middle_block"),
+    bottom: document.querySelector("#bottom_block"),
+};
+
 export const INPUTS = {
     messageInput: document.querySelector("#messageInput"),
+};
+
+export const MESSAGE = {
+    template: document.querySelector("#messageTemplate"),
 };
