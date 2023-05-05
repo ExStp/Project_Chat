@@ -9,4 +9,10 @@
         justify-content: left;
         gap: 15px;
     }
+    
+    .loader {
+        left: calc(50% - 40px);
+        top: 75%;
+        position: absolute;
+    }
 }

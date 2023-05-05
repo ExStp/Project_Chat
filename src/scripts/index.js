@@ -10,3 +10,5 @@ document.addEventListener("keydown", (event) => {
     if (event.code === "Enter") sendMessage();
     else INPUTS.messageInput.focus();
 });
+
+document.addEventListener('submit', (event) => event.preventDefault())

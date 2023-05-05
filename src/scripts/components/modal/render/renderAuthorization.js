@@ -1,5 +1,4 @@
 import { DIALOG, BUTTONS } from "../../const.js";
-import { closeModal } from "./closeModal.js";
 
 function renderAuthorization() {
     DIALOG.modalForm.append(getAuthorizationForm());
@@ -38,8 +37,11 @@ function getAuthorizationForm() {
     btnSendCode.classList.add("dialog_btn");
     btnSendCode.setAttribute("id", "sendCode");
 
+    const loader = document.createElement("div");
+    loader.classList.add('loader');
+
     divBtnsWrapper.append(btnGetCode, btnSendCode);
-    form.append(label, input, divBtnsWrapper);
+    form.append(label, input, divBtnsWrapper, loader);
 
     return form;
 }
