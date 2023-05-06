@@ -2,6 +2,7 @@ import { renderAuthorization } from "./render/renderAuthorization.js";
 import { confirmation } from "./confirmation.js";
 import { closeModal } from "./render/closeModal.js";
 import { getToken } from "../logic/authorization/getToken.js";
+import Loader from "../../utils/Loader/Loader.js";
 
 function authorization(event) {
     event.preventDefault();
@@ -10,14 +11,10 @@ function authorization(event) {
     const sendCodeBtn = document.querySelector("#sendCode");
     const emailInput = document.querySelector("#emailInput");
     const getCodeBtn = document.querySelector("#getCode");
-    const loader = document.querySelector(".loader");
+    const form = document.querySelector(".authorization_form");
+    const loaderElem = new Loader(form);
 
-    const Loader = {
-        show: () => loader.classList.add("inProgress"),
-        hide: () => loader.classList.remove("inProgress"),
-    };
-
-    if (!sendCodeBtn || !emailInput || !getCodeBtn || !loader) {
+    if (!sendCodeBtn || !emailInput || !getCodeBtn) {
         alert("Ошибка при отображении окна, требуется перезагрузка страницы");
         location.reload();
         return;
@@ -28,7 +25,8 @@ function authorization(event) {
     function handleGetCode(event) {
         event.preventDefault();
         const email = emailInput.value;
-        Loader.show();
+        if (!isValidEmail(email)) return;
+        loaderElem.show();
         getToken(email).then((responseOK) => {
             if (responseOK) {
                 emailInput.placeholder = "Вы успешно зарегистрированы!";
@@ -36,7 +34,7 @@ function authorization(event) {
                 emailInput.placeholder = "Ошибка, перезагрузите страницу";
             }
             emailInput.value = "";
-            Loader.hide();
+            loaderElem.hide();
         });
     }
 
