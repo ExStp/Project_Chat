@@ -7,30 +7,43 @@ function authorization(event) {
     event.preventDefault();
     renderAuthorization();
 
-    const sendCode = document.querySelector("#sendCode");
+    const sendCodeBtn = document.querySelector("#sendCode");
     const emailInput = document.querySelector("#emailInput");
-    const getCode = document.querySelector("#getCode");
+    const getCodeBtn = document.querySelector("#getCode");
     const loader = document.querySelector(".loader");
 
-    getCode.addEventListener("click", handleGetCode);
+    const Loader = {
+        show: () => loader.classList.add("inProgress"),
+        hide: () => loader.classList.remove("inProgress"),
+    };
+
+    if (!sendCodeBtn || !emailInput || !getCodeBtn || !loader) {
+        alert("Ошибка при отображении окна, требуется перезагрузка страницы");
+        location.reload();
+        return;
+    }
+
+    getCodeBtn.addEventListener("click", handleGetCode);
 
     function handleGetCode(event) {
         event.preventDefault();
         const email = emailInput.value;
-        if (!isValidEmail(email)) return;
-        loader.classList.add("inProgress");
-        // TODO: Улучшить вывод сообщения о регистрации
-        getToken(email).then(() => {
-            emailInput.placeholder = "Вы успешно зарегистрированы!";
+        Loader.show();
+        getToken(email).then((responseOK) => {
+            if (responseOK) {
+                emailInput.placeholder = "Вы успешно зарегистрированы!";
+            } else {
+                emailInput.placeholder = "Ошибка, перезагрузите страницу";
+            }
             emailInput.value = "";
-            loader.classList.remove("inProgress");
+            Loader.hide();
         });
     }
 
-    sendCode.addEventListener("click", handleSendCode);
+    sendCodeBtn.addEventListener("click", handleSendCode);
 
     function handleSendCode() {
-        sendCode.removeEventListener("click", handleSendCode);
+        sendCodeBtn.removeEventListener("click", handleSendCode);
         closeModal();
         confirmation(event);
     }

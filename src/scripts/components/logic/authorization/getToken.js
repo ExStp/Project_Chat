@@ -10,9 +10,10 @@ async function getToken(email) {
             body: JSON.stringify({ email }),
         });
         if (!response.ok) throw new Error("Ошибка на стороне сервера");
-        return await response.json();
+        return true;
     } catch (error) {
         alert(error.message);
+        return false;
     }
 }
 
