@@ -149,7 +149,7 @@ body {
   animation: spin 2s linear infinite;
   margin: auto;
   display: none; }
-  .loader.inProgress {
+  .loader.active {
     display: block; }
 
 @keyframes spin {
@@ -157,6 +157,21 @@ body {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999; }
+  .box.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .box.hide {
+    opacity: 0;
+    transform: translate(-50%, -150%) scale(0.5); }
 
 .messages_wrapper {
   display: flex;

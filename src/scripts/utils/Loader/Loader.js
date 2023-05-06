@@ -13,10 +13,10 @@ export default class Loader {
     }
 
     show() {
-        this.loaderElem.classList.add("inProgress");
+        this.loaderElem.classList.add("active");
     }
 
     hide() {
-        this.loaderElem.classList.remove("inProgress");
+        this.loaderElem.classList.remove("active");
     }
 }

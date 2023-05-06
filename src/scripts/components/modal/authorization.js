@@ -3,6 +3,7 @@ import { confirmation } from "./confirmation.js";
 import { closeModal } from "./render/closeModal.js";
 import { getToken } from "../logic/authorization/getToken.js";
 import Loader from "../../utils/Loader/Loader.js";
+// import Alert from "../../utils/Alert/Alert.js";
 
 function authorization(event) {
     event.preventDefault();
@@ -14,11 +15,12 @@ function authorization(event) {
     const form = document.querySelector(".authorization_form");
     const loaderElem = new Loader(form);
 
-    if (!sendCodeBtn || !emailInput || !getCodeBtn) {
+    if (!sendCodeBtn || !emailInput || !getCodeBtn || !loaderElem) {
         alert("Ошибка при отображении окна, требуется перезагрузка страницы");
         location.reload();
         return;
     }
+
 
     getCodeBtn.addEventListener("click", handleGetCode);
 
@@ -30,6 +32,7 @@ function authorization(event) {
         getToken(email).then((responseOK) => {
             if (responseOK) {
                 emailInput.placeholder = "Вы успешно зарегистрированы!";
+                // TODO: Сделать алерт 
             } else {
                 emailInput.placeholder = "Ошибка, перезагрузите страницу";
             }
