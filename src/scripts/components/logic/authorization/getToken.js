@@ -2,7 +2,7 @@ import { URL } from "../../const";
 
 async function getToken(email) {
     try {
-        let response = await fetch(URL.getToken, {
+        let response = await fetch(URL.api, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",

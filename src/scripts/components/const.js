@@ -26,5 +26,6 @@ export const MESSAGE = {
 };
 
 export const URL = {
-    getToken: "https://edu.strada.one/api/user",
+    api: "https://edu.strada.one/api/user",
+    data: "https://edu.strada.one/api/user/me",
 };

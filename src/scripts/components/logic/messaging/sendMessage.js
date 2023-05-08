@@ -1,4 +1,5 @@
 import { INPUTS } from "../../const.js";
+import { getData } from "../confirmation/getData.js";
 import { appendMessage } from "./appendMessage.js";
 
 function sendMessage() {
@@ -6,7 +7,7 @@ function sendMessage() {
     if (!isValid(text)) return;
     appendMessage(text);
 
-
+    getData();
     console.log("send message");
 }
 

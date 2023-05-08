@@ -31,7 +31,7 @@ function authorization(event) {
         loaderElem.show();
         getToken(email).then((responseOK) => {
             if (responseOK) {
-                emailInput.placeholder = "Вы успешно зарегистрированы!";
+                emailInput.placeholder = "Успешно! Проверьте почту";
                 // TODO: Сделать алерт 
             } else {
                 emailInput.placeholder = "Ошибка, перезагрузите страницу";
