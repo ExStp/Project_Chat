@@ -25,10 +25,13 @@
             <div class="messages_wrapper block" id="middle_block">
 
                 <template id="messageTemplate">
-                    <!-- классы: message_left || message_right && sended || delivered -->
                     <div class="message_item">
-                        <div id="messageText" class="message_innerText">dwd</div>
-                        <div id="messageTime" class="message_innerTime">15</div>
+                        <div class="message_innerText">
+                            <span id="messageUsername"></span>
+                            :
+                            <span id="messageText"></span>
+                        </div>
+                        <div id="messageTime" class="message_innerTime"></div>
                     </div>
                 </template>
 
@@ -44,7 +47,7 @@
             <dialog id="modal">
 
                 <div class="modal__top_bar">
-                    <span class="top_bar__action">Диалог</span>
+                    <span class="top_bar__action"></span>
                     <input type="button" value="close"
                         class="material-symbols-outlined" id="btnModalClose">
                 </div>

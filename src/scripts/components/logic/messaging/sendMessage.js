@@ -1,14 +1,13 @@
 import { INPUTS } from "../../const.js";
-import { getData } from "../confirmation/getData.js";
+import { getData } from "../data/getData.js";
 import { appendMessage } from "./appendMessage.js";
 
-function sendMessage() {
+async function sendMessage() {
     const text = INPUTS.messageInput.value;
     if (!isValid(text)) return;
-    appendMessage(text);
-
-    getData();
-    console.log("send message");
+    // appendMessage(text);
+    const data = await getData();
+    console.log("🚀 ~ file: sendMessage.js:10 ~ sendMessage ~ data:", data)
 }
 
 function isValid(inputValue) {

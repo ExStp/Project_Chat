@@ -13,7 +13,7 @@ function confirmation(event) {
     function handleConfirmCode() {
         const token = removeSpaces(codeInput.value);
         if (token.trim() === "") return;
-        codeInput.value = '';
+        codeInput.value = "";
         saveTokenCookie(token);
     }
 }

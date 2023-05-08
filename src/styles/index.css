@@ -136,6 +136,8 @@ body {
     background: #F7F7F7; }
   .message_item .message_innerText {
     font-size: 22px; }
+    .message_item .message_innerText #messageUsername {
+      font-style: italic; }
   .message_item .message_innerTime {
     font-style: italic;
     font-size: 18px; }
@@ -158,7 +160,7 @@ body {
   100% {
     transform: rotate(360deg); } }
 
-.box {
+.alert {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -166,10 +168,10 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999; }
-  .box.show {
+  .alert.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
-  .box.hide {
+  .alert.hide {
     opacity: 0;
     transform: translate(-50%, -150%) scale(0.5); }
 

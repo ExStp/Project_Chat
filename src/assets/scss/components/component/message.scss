@@ -21,6 +21,10 @@ $sendedColor: #F7F7F7;
 
     .message_innerText {
         font-size: 22px;
+
+        #messageUsername {
+            font-style: italic;
+        }
     }
 
     .message_innerTime {

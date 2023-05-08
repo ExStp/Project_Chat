@@ -27,5 +27,6 @@ export const MESSAGE = {
 
 export const URL = {
     api: "https://edu.strada.one/api/user",
-    data: "https://edu.strada.one/api/user/me",
+    userData: "https://edu.strada.one/api/user/me",
+    messagesData: "https://edu.strada.one/api/messages/",
 };

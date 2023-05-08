@@ -21,7 +21,6 @@ function authorization(event) {
         return;
     }
 
-
     getCodeBtn.addEventListener("click", handleGetCode);
 
     function handleGetCode(event) {
@@ -32,7 +31,7 @@ function authorization(event) {
         getToken(email).then((responseOK) => {
             if (responseOK) {
                 emailInput.placeholder = "Успешно! Проверьте почту";
-                // TODO: Сделать алерт 
+                // TODO: Сделать алерт
             } else {
                 emailInput.placeholder = "Ошибка, перезагрузите страницу";
             }
