@@ -1,5 +1,6 @@
 import Cookies from "js-cookie";
 import { BUTTONS, INPUTS, URL, WINDOWS } from "./components/const.js";
+import { getData } from "./components/logic/data/getData.js";
 import { appendMessage } from "./components/logic/messaging/appendMessage.js";
 import { sendMessage } from "./components/logic/messaging/sendMessage.js";
 import { showMessages } from "./components/logic/messaging/showMessages.js";
@@ -19,11 +20,12 @@ socket.onclose = function () {
 socket.onerror = function (error) {
     alert(`[error] ${error}`);
 };
-socket.onmessage = function (event) {
+
+socket.onmessage = async function (event) {
+    const data = await getData();
     const postData = JSON.parse(event.data);
-    appendMessage(postData);
+    appendMessage(postData, data.email);
     WINDOWS.middle.scrollTop = WINDOWS.middle.scrollHeight;
-    // showMessages();
 };
 
 document.addEventListener("DOMContentLoaded", () => {

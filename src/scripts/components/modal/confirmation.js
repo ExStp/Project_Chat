@@ -14,6 +14,7 @@ function confirmation(event) {
         const token = removeSpaces(codeInput.value);
         if (token.trim() === "") return;
         codeInput.value = "";
+        codeInput.placeHolder = "Успех, Вы авторизованы!";
         saveTokenCookie(token);
     }
 }
