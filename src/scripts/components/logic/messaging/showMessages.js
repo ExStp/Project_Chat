@@ -3,12 +3,19 @@ import { getMessagesData } from "../data/getMessagesData";
 import { appendMessage } from "./appendMessage";
 
 async function showMessages() {
-    console.log("show");
+    removeChildElements(WINDOWS.middle);
     const { messages } = await getMessagesData();
-    messages.forEach((postData) => {
+    const messagesData = messages.reverse();
+    messagesData.forEach((postData) => {
         appendMessage(postData);
     });
     WINDOWS.middle.scrollTop = WINDOWS.middle.scrollHeight;
+}
+
+function removeChildElements(parentElement) {
+    while (parentElement.hasChildNodes()) {
+        parentElement.removeChild(parentElement.lastChild);
+    }
 }
 
 export { showMessages };

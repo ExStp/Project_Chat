@@ -1,7 +1,6 @@
 import Cookies from "js-cookie";
 import { URL } from "../../const";
 
-
 // TODO: добавить проверки на ошибки
 async function patchUsername(userName) {
     const token = Cookies.get("StradaToken");
@@ -14,7 +13,7 @@ async function patchUsername(userName) {
         body: JSON.stringify({ name: userName }),
     });
     const result = await response.json();
-    console.log(result);
+    location.reload();
 }
 
 export { patchUsername };

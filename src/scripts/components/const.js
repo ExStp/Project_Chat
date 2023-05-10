@@ -29,4 +29,5 @@ export const URL = {
     api: "https://edu.strada.one/api/user",
     userData: "https://edu.strada.one/api/user/me",
     messagesData: "https://edu.strada.one/api/messages/",
+    socket: "wss://edu.strada.one/websockets?",
 };

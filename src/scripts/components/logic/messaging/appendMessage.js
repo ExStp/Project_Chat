@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { MESSAGE, WINDOWS } from "../../const";
 
 function appendMessage(postData) {
+    console.log(postData);
     const {
         __v,
         _id,
