@@ -1,29 +1,65 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.URL = exports.MESSAGE = exports.INPUTS = exports.WINDOWS = exports.DIALOG = exports.BUTTONS = void 0;
-exports.BUTTONS = {
+interface IButtons {
+    quit: HTMLButtonElement | null;
+    modalClose: HTMLButtonElement | null;
+    openSettings: HTMLButtonElement | null;
+    btnMessage: HTMLButtonElement | null;
+}
+
+interface IDialog {
+    modal: HTMLDivElement | null;
+    purpose: HTMLDivElement | null;
+    modalForm: HTMLDivElement | null;
+}
+
+interface IWindows {
+    top: HTMLElement | null;
+    middle: HTMLElement | null;
+    bottom: HTMLElement | null;
+}
+
+interface IInputs {
+    messageInput: HTMLInputElement | null;
+}
+
+interface IMessage {
+    template: HTMLElement | null;
+}
+
+interface IURLs {
+    api: string;
+    userData: string;
+    messagesData: string;
+    socket: string;
+}
+
+export const BUTTONS: IButtons = {
     quit: document.querySelector("#btnQuit"),
     modalClose: document.querySelector("#btnModalClose"),
     openSettings: document.querySelector("#btnOpenSettings"),
     btnMessage: document.querySelector("#btnMessage"),
 };
-exports.DIALOG = {
+
+export const DIALOG: IDialog = {
     modal: document.querySelector("#modal"),
     purpose: document.querySelector(".top_bar__action"),
     modalForm: document.querySelector(".modal__form_container"),
 };
-exports.WINDOWS = {
+
+export const WINDOWS: IWindows = {
     top: document.querySelector("#top_block"),
     middle: document.querySelector("#middle_block"),
     bottom: document.querySelector("#bottom_block"),
 };
-exports.INPUTS = {
+
+export const INPUTS: IInputs = {
     messageInput: document.querySelector("#messageInput"),
 };
-exports.MESSAGE = {
+
+export const MESSAGE: IMessage = {
     template: document.querySelector("#messageTemplate"),
 };
-exports.URL = {
+
+export const URL: IURLs = {
     api: "https://edu.strada.one/api/user",
     userData: "https://edu.strada.one/api/user/me",
     messagesData: "https://edu.strada.one/api/messages/",
